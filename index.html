@@ -365,8 +365,8 @@
             <!-- Pending Orders -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-12 mb-4">
                 <div>
-                    <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="inbox" class="w-5 h-5 text-amber-400"></i> New Orders <span id="pendingCount" class="text-xs font-sans bg-amber-500/20 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/30">0</span></h3>
-                    <p class="text-xs text-gray-400">Check the payment receipt, then accept or reject. Accepted orders move to the section below.</p>
+                    <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="inbox" class="w-5 h-5 text-amber-400"></i> Awaiting Verification <span id="pendingCount" class="text-xs font-sans bg-amber-500/20 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/30">0</span></h3>
+                    <p class="text-xs text-gray-400">Open the order details and check the payment receipt, then press Verify. Verified orders move to the section below.</p>
                 </div>
                 <button onclick="loadAdminOrders()" class="px-4 py-2.5 rounded-xl bg-gray-800/80 hover:bg-gray-700 border border-gray-700 text-gray-200 text-sm font-semibold transition-all flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Refresh</button>
             </div>
@@ -374,7 +374,7 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm text-gray-300">
                         <thead class="bg-gray-800/80 text-gray-400 uppercase text-xs tracking-wider border-b border-gray-700">
-                            <tr><th class="px-4 py-4">Order</th><th class="px-4 py-4">Customer</th><th class="px-4 py-4">Payment</th><th class="px-4 py-4">Items</th><th class="px-4 py-4">Total</th><th class="px-4 py-4">Receipt</th><th class="px-4 py-4 text-right">Decision</th></tr>
+                            <tr><th class="px-4 py-4">Order</th><th class="px-4 py-4">Customer</th><th class="px-4 py-4">Payment</th><th class="px-4 py-4">Items</th><th class="px-4 py-4">Total</th><th class="px-4 py-4">Receipt</th><th class="px-4 py-4 text-right">Actions</th></tr>
                         </thead>
                         <tbody id="adminPendingTable" class="divide-y divide-gray-800"></tbody>
                     </table>
@@ -383,19 +383,19 @@
 
             <!-- Accepted Orders -->
             <div class="mt-12 mb-4">
-                <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-emerald-400"></i> Accepted Orders</h3>
-                <p class="text-xs text-gray-400">Every order you accepted, saved in the database. Review full details here at any time, with or without the Gmail alert.</p>
+                <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-emerald-400"></i> Verified Orders</h3>
+                <p class="text-xs text-gray-400">Every order you verified, saved in the database. Review full details here at any time, with or without the Gmail alert.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-                <div class="glass-card rounded-2xl border border-gray-800 p-4"><div class="text-[11px] uppercase tracking-widest text-gray-500">Accepted orders</div><div id="accStatCount" class="text-2xl font-extrabold text-white mt-1">0</div></div>
-                <div class="glass-card rounded-2xl border border-gray-800 p-4"><div class="text-[11px] uppercase tracking-widest text-gray-500">Accepted revenue</div><div id="accStatRevenue" class="text-2xl font-extrabold text-emerald-400 mt-1">0 EGP</div></div>
+                <div class="glass-card rounded-2xl border border-gray-800 p-4"><div class="text-[11px] uppercase tracking-widest text-gray-500">Verified orders</div><div id="accStatCount" class="text-2xl font-extrabold text-white mt-1">0</div></div>
+                <div class="glass-card rounded-2xl border border-gray-800 p-4"><div class="text-[11px] uppercase tracking-widest text-gray-500">Verified revenue</div><div id="accStatRevenue" class="text-2xl font-extrabold text-emerald-400 mt-1">0 EGP</div></div>
                 <div class="glass-card rounded-2xl border border-gray-800 p-4"><div class="text-[11px] uppercase tracking-widest text-gray-500">Delivered</div><div id="accStatDelivered" class="text-2xl font-extrabold text-white mt-1">0</div></div>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 mb-4">
                 <input type="text" id="accSearch" oninput="renderAcceptedOrders()" placeholder="Search name, phone, order #, item..." class="flex-1 px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
                 <select id="accFilter" onchange="renderAcceptedOrders()" class="px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white">
-                    <option value="accepted">All accepted</option>
-                    <option value="confirmed">Confirmed</option>
+                    <option value="accepted">All verified</option>
+                    <option value="confirmed">Verified, not shipped yet</option>
                     <option value="shipped">Shipped</option>
                     <option value="delivered">Delivered</option>
                     <option value="cancelled">Rejected / cancelled</option>
@@ -692,8 +692,8 @@
                     <div id="payInfo" class="rounded-xl p-4 bg-brand-900/30 border border-brand-500/30 text-sm text-gray-200"></div>
 
                     <div id="fieldsInstapay">
-                        <label class="block text-xs font-semibold text-gray-300 mb-1">Your Instagram Username / يوزر انستجرام</label>
-                        <input type="text" id="chkInstagram" maxlength="31" placeholder="@username" autocomplete="off" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Your InstaPay Address / عنوان انستاباي</label>
+                        <input type="text" id="chkInstapay" maxlength="60" dir="ltr" placeholder="example@instapay" autocomplete="off" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
                     </div>
                     <div id="fieldsWallet" class="hidden">
                         <label class="block text-xs font-semibold text-gray-300 mb-1">Sending Mobile Number / الرقم المحوّل منه</label>
@@ -1149,7 +1149,7 @@
         const RECEIPT_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
         const MOBILE_RE = /^(\+?20|0)1[0125]\d{8}$/;
         const CONTACT_RE = /^\+?[0-9]{8,15}$/;
-        const INSTA_RE = /^@?[A-Za-z0-9._]{1,30}$/;
+        const INSTA_RE = /^[A-Za-z0-9._-]{2,50}@[A-Za-z0-9._-]{2,30}$/;
         const cleanNum = v => String(v || '').replace(/[\s-]/g, '');
 
         function openCheckout() {
@@ -1179,7 +1179,7 @@
             document.getElementById('payBtnWallet').className = `py-3 rounded-xl border text-sm font-bold transition-all flex items-center justify-center gap-2 ${m === 'wallet' ? on : off}`;
             document.getElementById('fieldsInstapay').classList.toggle('hidden', m !== 'instapay');
             document.getElementById('fieldsWallet').classList.toggle('hidden', m !== 'wallet');
-            document.getElementById('chkInstagram').required = m === 'instapay';
+            document.getElementById('chkInstapay').required = m === 'instapay';
             document.getElementById('chkSender').required = m === 'wallet';
             const details = (m === 'instapay' ? settings.instapay : settings.wallet) || '';
             document.getElementById('payInfo').innerHTML = `<div class="font-bold mb-1">Transfer <span class="text-white">${cartTotal().toLocaleString()} EGP</span> to:</div>`
@@ -1204,10 +1204,10 @@
             if (!lines.length) { showToast('Your cart is empty', 'error'); closeCheckout(); return; }
             const v = id => document.getElementById(id).value.trim();
             const name = v('chkName'), address = v('chkAddress'), phone = cleanNum(v('chkPhone')), phone2 = cleanNum(v('chkPhone2'));
-            const instagram = v('chkInstagram'), sender = cleanNum(v('chkSender'));
+            const instagram = v('chkInstapay'), sender = cleanNum(v('chkSender'));
             if (!CONTACT_RE.test(phone)) { showToast('Enter a valid contact number', 'error'); return; }
             if (phone2 && !CONTACT_RE.test(phone2)) { showToast('The optional second number is not valid', 'error'); return; }
-            if (payMethod === 'instapay' && !INSTA_RE.test(instagram)) { showToast('Enter a valid Instagram username', 'error'); return; }
+            if (payMethod === 'instapay' && !INSTA_RE.test(instagram)) { showToast('Enter a valid InstaPay address (like name@instapay)', 'error'); return; }
             if (payMethod === 'wallet' && !MOBILE_RE.test(sender)) { showToast('Enter the mobile number you sent the payment from', 'error'); return; }
             if (!receiptFile) { showToast('Please attach the payment receipt screenshot', 'error'); return; }
 
@@ -1221,7 +1221,7 @@
                 const { data, error } = await sb.rpc('place_order', {
                     p_customer: {
                         name, address, phone, phone2: phone2 || null, payment_method: payMethod,
-                        instagram: payMethod === 'instapay' ? instagram.replace(/^@/, '') : null,
+                        instagram: payMethod === 'instapay' ? instagram : null,
                         sender_number: payMethod === 'wallet' ? sender : null, receipt_path: path
                     },
                     p_items: cart.map(i => ({ id: i.id, qty: i.qty }))
@@ -1313,9 +1313,10 @@
         let adminOrders = [];
         const ACCEPTED = ['confirmed', 'shipped', 'delivered'];
         const ACCEPTED_STATUSES = ['confirmed', 'shipped', 'delivered'];
+        const statusLabel = st => st === 'confirmed' ? 'verified' : st;
         const orderRef = o => String(o.id).slice(0, 8).toUpperCase();
         const orderPay = o => o.payment_method === 'instapay'
-            ? `InstaPay<br><span class="text-xs text-gray-400">@${esc(o.instagram || '')}</span>`
+            ? `InstaPay<br><span class="text-xs text-gray-400" dir="ltr">${esc(o.instagram || '')}</span>`
             : `E-Wallet<br><span class="text-xs text-gray-400" dir="ltr">${esc(o.sender_number || '')}</span>`;
         const orderItems = o => (o.items || []).map(i => `${esc(i.title)} ×${num(i.qty)}`).join('<br>');
         const emptyRow = (cols, msg) => `<tr><td colspan="${cols}" class="px-6 py-8 text-center text-gray-500 text-xs">${msg}</td></tr>`;
@@ -1346,7 +1347,8 @@
                     <td class="px-4 py-4 font-bold text-white whitespace-nowrap">${num(o.total).toLocaleString()} EGP</td>
                     <td class="px-4 py-4"><button onclick="viewReceipt('${esc(o.receipt_path)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">View</button></td>
                     <td class="px-4 py-4 text-right whitespace-nowrap space-x-2">
-                        <button onclick="updateOrderStatus('${esc(o.id)}','confirmed')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold text-white transition-all">Accept</button>
+                        <button onclick="openOrderDetail('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">Order details</button>
+                        <button onclick="updateOrderStatus('${esc(o.id)}','confirmed')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold text-white transition-all">Verify</button>
                         <button onclick="rejectOrder('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-red-600 text-xs font-semibold text-gray-200 transition-all">Reject</button>
                     </td>
                 </tr>`).join('') : emptyRow(7, 'No orders waiting for review.');
@@ -1370,7 +1372,7 @@
                     <td class="px-4 py-4 text-xs">${orderItems(o)}</td>
                     <td class="px-4 py-4 font-bold text-white whitespace-nowrap">${num(o.total).toLocaleString()} EGP</td>
                     <td class="px-4 py-4">${ACCEPTED.includes(o.status)
-                        ? `<select onchange="updateOrderStatus('${esc(o.id)}', this.value)" class="bg-dark-input border border-gray-700 rounded-lg px-2 py-1.5 text-xs text-white">${ACCEPTED_STATUSES.map(st => `<option value="${st}" ${o.status === st ? 'selected' : ''}>${st}</option>`).join('')}</select>`
+                        ? `<select onchange="updateOrderStatus('${esc(o.id)}', this.value)" class="bg-dark-input border border-gray-700 rounded-lg px-2 py-1.5 text-xs text-white">${ACCEPTED_STATUSES.map(st => `<option value="${st}" ${o.status === st ? 'selected' : ''}>${statusLabel(st)}</option>`).join('')}</select>`
                         : `<span class="text-xs font-bold px-2 py-1 rounded-lg bg-red-500/20 text-red-400 border border-red-500/30">${esc(o.status)}</span>`}</td>
                     <td class="px-4 py-4 text-right"><button onclick="openOrderDetail('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">Open</button></td>
                 </tr>`).join('') : emptyRow(6, 'No orders match.');
@@ -1383,22 +1385,28 @@
             const row = (k, v) => `<div class="flex justify-between gap-4 py-2 border-b border-gray-800 text-sm"><span class="text-gray-400">${k}</span><span class="text-gray-100 font-semibold text-right">${v}</span></div>`;
             document.getElementById('orderDetailBody').innerHTML = `
                 <h3 class="font-lux text-2xl font-bold text-white">Order #${esc(orderRef(o))}</h3>
-                <p class="text-xs text-gray-400 mb-4">${esc(new Date(o.created_at).toLocaleString())} · Status: <b class="text-gray-200">${esc(o.status)}</b></p>
+                <p class="text-xs text-gray-400 mb-4">${esc(new Date(o.created_at).toLocaleString())} · Status: <b class="text-gray-200">${esc(o.status === 'pending' ? 'awaiting verification' : statusLabel(o.status))}</b></p>
                 <div class="mb-5">
                     ${row('Customer', esc(o.customer_name))}
                     ${row('Contact number', `<span dir="ltr">${esc(o.phone)}</span>`)}
                     ${o.phone2 ? row('Second number', `<span dir="ltr">${esc(o.phone2)}</span>`) : ''}
                     ${row('Delivery address', esc(o.address))}
                     ${row('Payment method', o.payment_method === 'instapay' ? 'InstaPay' : 'E-Wallet')}
-                    ${o.payment_method === 'instapay' ? row('Instagram username', '@' + esc(o.instagram || '')) : row('Sent from number', `<span dir="ltr">${esc(o.sender_number || '')}</span>`)}
+                    ${o.payment_method === 'instapay' ? row('InstaPay address', `<span dir="ltr">${esc(o.instagram || '')}</span>`) : row('Sent from number', `<span dir="ltr">${esc(o.sender_number || '')}</span>`)}
                 </div>
                 <table class="w-full text-sm mb-2"><thead><tr class="text-xs uppercase text-gray-500 border-b border-gray-700"><th class="text-left py-2">Item</th><th class="py-2">Qty</th><th class="text-right py-2">Unit</th><th class="text-right py-2">Subtotal</th></tr></thead><tbody>${lines}</tbody></table>
                 <div class="flex justify-between items-center py-3 border-t border-gray-700 mb-5"><span class="font-bold text-white">Total</span><span class="text-xl font-extrabold text-emerald-400">${num(o.total).toLocaleString()} EGP</span></div>
-                <button onclick="viewReceipt('${esc(o.receipt_path)}')" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> View payment receipt</button>`;
+                <button onclick="viewReceipt('${esc(o.receipt_path)}')" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> View payment receipt</button>
+                ${o.status === 'pending' ? `<div class="grid grid-cols-2 gap-3 mt-3">
+                    <button onclick="verifyFromModal('${esc(o.id)}')" class="py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"><i data-lucide="badge-check" class="w-4 h-4"></i> Verify order</button>
+                    <button onclick="rejectFromModal('${esc(o.id)}')" class="py-3 rounded-xl bg-gray-800 hover:bg-red-600 text-gray-200 font-semibold text-sm transition-all">Reject</button>
+                </div>` : ''}`;
             lucide.createIcons();
             document.getElementById('orderDetailModal').classList.remove('hidden');
         }
         function closeOrderDetail() { document.getElementById('orderDetailModal').classList.add('hidden'); }
+        function verifyFromModal(id) { closeOrderDetail(); updateOrderStatus(id, 'confirmed'); }
+        function rejectFromModal(id) { closeOrderDetail(); rejectOrder(id); }
 
         async function viewReceipt(path) {
             if (!sb) return;
@@ -1414,7 +1422,7 @@
             const o = adminOrders.find(x => x.id === id);
             if (o) o.status = status;
             renderAdminOrders();
-            showToast(status === 'confirmed' ? 'Order accepted' : 'Order marked ' + status, 'success');
+            showToast(status === 'confirmed' ? 'Order verified' : 'Order marked ' + statusLabel(status), 'success');
         }
         function rejectOrder(id) {
             if (!confirm('Reject this order? Stock is NOT returned automatically.')) return;
