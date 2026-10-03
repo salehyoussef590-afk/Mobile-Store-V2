@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS - Next-Gen Mobile Store</title>
+    <title>SABAT STORE | يا تلحقوني يا تسامحوني</title>
+    <meta name="theme-color" content="#0d0b08">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f4ead2' stroke='%23c8962b' stroke-width='3'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='32' font-weight='900' font-family='Arial' fill='%23b8892a'%3ES%3C/text%3E%3C/svg%3E">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -22,20 +24,9 @@
                         serif: ['"Playfair Display"', '"Cairo"', 'serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            700: '#4338ca',
-                            900: '#312e81',
-                        },
-                        dark: {
-                            bg: '#0b0f19',
-                            card: '#111827',
-                            border: '#1f2937',
-                            input: '#1d283a'
-                        }
+                        brand: { 50: '#fbf5e4', 100: '#f3e4b5', 300: '#ecd48a', 400: '#e0b84f', 500: '#c8962b', 600: '#9a6f17', 700: '#7d5a10', 900: '#3d2d0f' },
+                        gray: { 50: '#faf8f4', 100: '#f3efe7', 200: '#e5dfd2', 300: '#d6cfbf', 400: '#aaa190', 500: '#7e7665', 600: '#5c5547', 700: '#3c372d', 800: '#27231c', 900: '#181510', 950: '#0f0d0a' },
+                        dark: { bg: '#0d0b08', card: '#16130e', border: '#2a251c', input: '#1e1a13' }
                     },
                     animation: {
                         'pulse-glow': 'pulseGlow 2s infinite',
@@ -72,33 +63,33 @@
     </script>
     <style>
         body {
-            background-color: #0b0f19;
+            background-color: #0d0b08;
             color: #f3f4f6;
             font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
             overflow-x: hidden;
         }
 
         ::-webkit-scrollbar { inline-size: 8px; }
-        ::-webkit-scrollbar-track { background: #0b0f19; }
-        ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #374151; }
+        ::-webkit-scrollbar-track { background: #0d0b08; }
+        ::-webkit-scrollbar-thumb { background: #2a251c; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3c372d; }
 
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
+            background: rgba(24, 21, 16, 0.72);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glass-nav {
-            background: rgba(11, 15, 25, 0.85);
+            background: rgba(13, 11, 8, 0.88);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-block-end: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glow-effect-hover:hover {
-            box-shadow: 0 0 30px 0px rgba(99, 102, 241, 0.45);
+            box-shadow: 0 0 30px 0px rgba(200, 150, 43, 0.42);
         }
 
         .red-glow-card {
@@ -121,9 +112,9 @@
         .reveal.in { animation: revealUp .8s cubic-bezier(.2,.7,.2,1) backwards; }
         .spot { position: relative; overflow: hidden; }
         .spot::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
-            background: radial-gradient(380px circle at var(--mx,50%) var(--my,50%), rgba(129,140,248,.16), transparent 60%); }
+            background: radial-gradient(380px circle at var(--mx,50%) var(--my,50%), rgba(224,184,79,.14), transparent 60%); }
         .spot:hover::before { opacity: 1; }
-        .lux-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(99,102,241,.7), transparent); }
+        .lux-line { height: 1px; background: linear-gradient(90deg, transparent, rgba(200,150,43,.7), transparent); }
         .glass-card { box-shadow: inset 0 1px 0 rgba(255,255,255,.06); }
         .hero-orb { animation: orb 12s ease-in-out infinite alternate; }
         @keyframes orb { to { transform: translate(60px,40px) scale(1.15); } }
@@ -134,19 +125,29 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="sabatLogo" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="30" fill="#f4ead2" stroke="#c8962b" stroke-width="2.5"/>
+            <path d="M32 15c-3-6-10-5-8 0 1.5 3 6 3 8 0zm0 0c3-6 10-5 8 0-1.5 3-6 3-8 0z" fill="none" stroke="#8a5a2b" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M19 38c0-17 26-17 26 0" fill="none" stroke="#8a5a2b" stroke-width="2.4" stroke-linecap="round"/>
+            <rect x="25" y="21" width="14" height="25" rx="3.2" fill="#e0b84f" stroke="#8f6a1f" stroke-width="1.2"/>
+            <rect x="27" y="23" width="6.5" height="6.5" rx="1.8" fill="#3d2d0f"/>
+            <circle cx="29" cy="25" r="1.1" fill="#c8962b"/><circle cx="31.6" cy="27.4" r="1.1" fill="#c8962b"/>
+            <path d="M13 38h38l-4.2 16a3 3 0 0 1-2.9 2.2H20.1a3 3 0 0 1-2.9-2.2z" fill="#b07a3c" stroke="#6b4423" stroke-width="1.4" stroke-linejoin="round"/>
+            <path d="M15.5 45h33M17.5 51h29M23 38.5l1.8 17M32 38.5v17.7M41 38.5l-1.8 17" stroke="#6b4423" stroke-width="1" opacity=".7" fill="none"/>
+        </symbol>
+    </svg>
 
     <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
     <header class="glass-nav sticky top-0 z-40 w-full transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center space-x-3 cursor-pointer" onclick="resetFilters()">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-500/30">
-                        <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <span class="text-xl font-extrabold tracking-wider bg-gradient-to-r from-white via-gray-200 to-brand-500 bg-clip-text text-transparent">NEXUS</span>
-                        <span class="text-xs block font-medium text-brand-500 tracking-widest uppercase -mt-1">MOBILE EGYPT</span>
+                <div class="flex items-center gap-3 cursor-pointer" onclick="resetFilters()">
+                    <svg class="w-11 h-11 shrink-0 drop-shadow-lg" role="img" aria-label="Sabat Store logo"><use href="#sabatLogo"/></svg>
+                    <div class="leading-tight">
+                        <div class="text-lg sm:text-xl font-black tracking-[0.12em]"><span class="bg-gradient-to-b from-brand-300 to-brand-600 bg-clip-text text-transparent">SABAT</span><span class="text-gray-100"> STORE</span></div>
+                        <div dir="rtl" class="text-[11px] sm:text-xs font-bold text-brand-400">يا تلحقوني يا تسامحوني</div>
                     </div>
                 </div>
 
@@ -162,10 +163,9 @@
                         <i data-lucide="shopping-cart" class="w-4 h-4 text-brand-500"></i><span class="hidden sm:inline">Cart</span>
                         <span id="cartBadge" class="hidden absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] px-1 rounded-full bg-red-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
                     </button>
-                    <button onclick="handleAdminDashboardClick()" id="adminToggleBtn" 
-                        class="px-3.5 py-2 rounded-xl border border-gray-700/80 bg-gray-800/50 hover:bg-gray-700/60 text-xs sm:text-sm font-semibold text-gray-300 hover:text-white transition-all flex items-center gap-2">
-                        <i data-lucide="shield" class="w-4 h-4 text-brand-500"></i>
-                        <span id="adminBtnText">Admin Dashboard</span>
+                    <button onclick="openMenu()" aria-label="Open menu" class="px-3 py-2 rounded-xl border border-gray-700/80 bg-gray-800/50 hover:bg-gray-700/60 text-gray-300 hover:text-white transition-all flex items-center gap-2">
+                        <i data-lucide="menu" class="w-5 h-5 text-brand-500"></i>
+                        <span id="menuUserLabel" class="hidden sm:inline max-w-[110px] truncate text-xs font-semibold"></span>
                     </button>
                 </div>
             </div>
@@ -178,16 +178,18 @@
             <div class="animate-slide-up glass-card rounded-3xl p-6 sm:p-10 border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div class="max-w-xl text-center lg:text-left">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-500 border border-brand-500/20 mb-4">
-                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Direct Seller Deals • Egypt
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Direct Seller Deals · Egypt
                     </span>
-                    <h1 class="font-lux text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
-                        Find Best Smartphone <br><span class="shine-text bg-gradient-to-r from-brand-500 via-indigo-300 to-purple-400 bg-clip-text text-transparent">Deals in EGP</span>
+                    <h1 class="font-lux text-4xl sm:text-6xl font-black tracking-wide leading-tight mb-3">
+                        <span class="shine-text bg-gradient-to-r from-brand-400 via-brand-300 to-brand-500 bg-clip-text text-transparent">SABAT</span> <span class="text-white">STORE</span>
                     </h1>
+                    <p dir="rtl" class="font-lux text-2xl sm:text-3xl font-extrabold text-brand-400 mb-4">يا تلحقوني يا تسامحوني</p>
+                    <div class="mb-5"><span class="inline-block px-3 py-1 rounded-sm font-extrabold text-xs tracking-wide" style="background:#f4ead2;color:#1a140a;border:2px solid #8f6a1f;box-shadow:0 2px 0 #8f6a1f">israa karam</span></div>
                     <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-6">
-                        Browse premium smartphones with instant discounted rates. Connect directly with sellers through WhatsApp or Telegram for immediate inquiries!
+                        Original iPhones and premium smartphones at the best prices in EGP. Order online, pay with InstaPay or e-wallet, and follow your order step by step.
                     </p>
                     <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                        <a href="#catalog" onclick="filterByOffers(false)" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold shadow-lg shadow-brand-500/30 transition-all flex items-center gap-2">
+                        <a href="#catalog" onclick="filterByOffers(false)" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg shadow-brand-500/30 transition-all flex items-center gap-2">
                             Browse All Devices
                         </a>
                         <a href="#catalog" onclick="filterByOffers(true)" class="px-6 py-3 rounded-xl bg-red-600/80 hover:bg-red-600 text-white text-sm font-semibold border border-red-500 shadow-lg shadow-red-500/30 transition-all flex items-center gap-2">
@@ -197,20 +199,15 @@
                 </div>
 
                 <div class="relative w-full max-w-sm flex justify-center">
-                    <div class="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl p-4 glass-card border border-white/20 animate-float shadow-2xl flex flex-col justify-between">
-                        <div class="flex justify-between items-center">
-                            <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Top Deal</span>
-                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/30 flex items-center gap-1">
-                                <i data-lucide="zap" class="w-3 h-3 text-red-400"></i> Offer
-                            </span>
+                    <div class="relative w-64 sm:w-72 rounded-3xl overflow-hidden glass-card border border-brand-500/40 animate-float shadow-2xl">
+                        <img src="store-front.jpg" alt="Sabat Store storefront" class="w-full h-80 sm:h-[26rem] object-cover" onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
+                        <div class="hidden h-80 sm:h-[26rem] flex flex-col items-center justify-center gap-4 p-6 text-center">
+                            <svg class="w-32 h-32"><use href="#sabatLogo"/></svg>
+                            <div class="font-black tracking-[0.12em] text-xl text-white">SABAT STORE</div>
                         </div>
-                        <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80" alt="Featured Mobile" class="w-44 h-44 object-contain mx-auto drop-shadow-2xl">
-                        <div>
-                            <h3 class="text-lg font-bold text-white">iPhone 15 Pro Max</h3>
-                            <div class="flex items-center gap-2">
-                                <p class="text-red-400 font-extrabold text-xl">54,000 EGP</p>
-                                <p class="text-xs text-gray-500 line-through">60,000 EGP</p>
-                            </div>
+                        <div class="absolute inset-x-0 bottom-0 p-4" style="background:linear-gradient(to top, rgba(13,11,8,.92), transparent)">
+                            <div class="text-sm font-black tracking-[0.12em] text-white">SABAT STORE</div>
+                            <div dir="rtl" class="text-xs font-bold text-brand-400">يا تلحقوني يا تسامحوني</div>
                         </div>
                     </div>
                 </div>
@@ -259,7 +256,7 @@
                 <i data-lucide="search-x" class="w-16 h-16 text-gray-500 mx-auto mb-4"></i>
                 <h3 class="text-xl font-bold text-white mb-2">No Smartphones Found</h3>
                 <p class="text-gray-400 text-sm max-w-md mx-auto mb-6">No devices found for the selected category or filter criteria.</p>
-                <button onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold transition-all">Clear Filters</button>
+                <button onclick="resetFilters()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-all">Clear Filters</button>
             </div>
 
             <!-- ACCESSORIES -->
@@ -289,7 +286,7 @@
                     <button onclick="openCredentialsModal()" class="px-4 py-2.5 rounded-xl bg-gray-800/80 hover:bg-gray-700 border border-gray-700 text-gray-200 text-sm font-semibold transition-all flex items-center gap-2">
                         <i data-lucide="key" class="w-4 h-4 text-brand-500"></i> Credentials
                     </button>
-                    <button onclick="openProductModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2">
+                    <button onclick="openProductModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2">
                         <i data-lucide="plus" class="w-4 h-4"></i> Add New Phone
                     </button>
                 </div>
@@ -327,7 +324,7 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-300 mb-1">Telegram Link or Username</label>
-                        <input type="text" id="setTelegram" placeholder="@nexus_store or https://t.me/nexus_store" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                        <input type="text" id="setTelegram" placeholder="@sabat_store or https://t.me/sabat_store" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
                     </div>
                 </div>
                 <div>
@@ -337,7 +334,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-gray-300 mb-1">InstaPay Payment Details</label>
-                        <textarea id="setInstapay" rows="3" maxlength="500" placeholder="InstaPay address / name, e.g. nexus@instapay" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
+                        <textarea id="setInstapay" rows="3" maxlength="500" placeholder="InstaPay address / name, e.g. sabat@instapay" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-300 mb-1">E-Wallet Payment Details</label>
@@ -358,7 +355,7 @@
                     <textarea id="setPolicies" rows="8" maxlength="8000" placeholder="Write your policies here. Line breaks are kept." class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500"></textarea>
                 </div>
                 <div class="flex justify-end">
-                    <button type="submit" id="settingsSaveBtn" class="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2"><i data-lucide="save" class="w-4 h-4"></i> Save Settings</button>
+                    <button type="submit" id="settingsSaveBtn" class="px-6 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2"><i data-lucide="save" class="w-4 h-4"></i> Save Settings</button>
                 </div>
             </form>
 
@@ -366,7 +363,7 @@
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mt-12 mb-4">
                 <div>
                     <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="inbox" class="w-5 h-5 text-amber-400"></i> Awaiting Verification <span id="pendingCount" class="text-xs font-sans bg-amber-500/20 text-amber-400 px-2.5 py-1 rounded-full border border-amber-500/30">0</span></h3>
-                    <p class="text-xs text-gray-400">Open the order details and check the payment receipt, then press Verify. Verified orders move to the section below.</p>
+                    <p class="text-xs text-gray-400">Open the order details and check the payment receipt, then press Verify. As admin you can also change any order's status or delete it. Verified orders move to the section below.</p>
                 </div>
                 <button onclick="loadAdminOrders()" class="px-4 py-2.5 rounded-xl bg-gray-800/80 hover:bg-gray-700 border border-gray-700 text-gray-200 text-sm font-semibold transition-all flex items-center gap-2"><i data-lucide="refresh-cw" class="w-4 h-4"></i> Refresh</button>
             </div>
@@ -405,7 +402,7 @@
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm text-gray-300">
                         <thead class="bg-gray-800/80 text-gray-400 uppercase text-xs tracking-wider border-b border-gray-700">
-                            <tr><th class="px-4 py-4">Order</th><th class="px-4 py-4">Customer</th><th class="px-4 py-4">Items</th><th class="px-4 py-4">Total</th><th class="px-4 py-4">Status</th><th class="px-4 py-4 text-right">Details</th></tr>
+                            <tr><th class="px-4 py-4">Order</th><th class="px-4 py-4">Customer</th><th class="px-4 py-4">Items</th><th class="px-4 py-4">Total</th><th class="px-4 py-4">Status</th><th class="px-4 py-4 text-right">Actions</th></tr>
                         </thead>
                         <tbody id="adminAcceptedTable" class="divide-y divide-gray-800"></tbody>
                     </table>
@@ -417,7 +414,7 @@
                     <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="headphones" class="w-5 h-5 text-brand-500"></i> Accessories</h3>
                     <p class="text-xs text-gray-400">Name, description and price. Saved to the cloud and shown in the Accessories section.</p>
                 </div>
-                <button onclick="openAccessoryModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Add Accessory</button>
+                <button onclick="openAccessoryModal()" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-lg transition-all flex items-center gap-2"><i data-lucide="plus" class="w-4 h-4"></i> Add Accessory</button>
             </div>
             <div class="glass-card rounded-2xl border border-gray-800 overflow-hidden">
                 <div class="overflow-x-auto">
@@ -454,7 +451,7 @@
                     <label class="block text-xs font-semibold text-gray-300 mb-1">Password</label>
                     <input type="password" id="loginPassword" required autocomplete="current-password" placeholder="••••••••" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
                 </div>
-                <button type="submit" id="loginSubmitBtn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
+                <button type="submit" id="loginSubmitBtn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2">
                     <i data-lucide="log-in" class="w-4 h-4"></i> Login
                 </button>
             </form>
@@ -515,7 +512,7 @@
                     <button id="detailCartBtn" class="flex-1 py-3 px-3 rounded-xl border border-gray-700 bg-gray-800/60 hover:bg-gray-800 text-gray-200 font-semibold text-sm transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
                         <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
                     </button>
-                    <button id="detailBuyBtn" class="flex-1 py-3 px-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                    <button id="detailBuyBtn" class="flex-1 py-3 px-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
                         <i data-lucide="zap" class="w-4 h-4"></i> <span>Buy Now</span>
                     </button>
                 </div>
@@ -540,7 +537,7 @@
                 <p class="text-xs text-gray-400 mb-3">Paste Arabic or English sales post below to auto-fill fields!</p>
                 <div class="flex gap-2">
                     <textarea id="aiRawInput" rows="2" placeholder="مثال: ايفون 15 برو ماكس 256 جيجا اسود تيتانيوم للبيع، معفي ضريبة، السعر 54000 بدلا من 60000. واتساب 01000000000" class="w-full px-3 py-2 bg-dark-input border border-gray-700 rounded-xl text-xs text-white focus:outline-none focus:border-brand-500"></textarea>
-                    <button type="button" onclick="runAIAssistantExtract()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold rounded-xl flex flex-col items-center justify-center gap-1 shrink-0">
+                    <button type="button" onclick="runAIAssistantExtract()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold rounded-xl flex flex-col items-center justify-center gap-1 shrink-0">
                         <i data-lucide="sparkles" class="w-4 h-4"></i> Auto Fill
                     </button>
                 </div>
@@ -615,7 +612,7 @@
 
                 <div class="flex justify-end gap-3 pt-4 border-t border-gray-800">
                     <button type="button" onclick="closeProductModal()" class="px-5 py-2.5 rounded-xl border border-gray-700 text-gray-300 text-sm font-semibold">Cancel</button>
-                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold">Save Device</button>
+                    <button type="submit" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold">Save Device</button>
                 </div>
             </form>
         </div>
@@ -639,7 +636,7 @@
                     <div id="accPreview" class="pt-2"></div></div>
                 <div class="flex justify-end gap-3 pt-4 border-t border-gray-800">
                     <button type="button" onclick="closeAccessoryModal()" class="px-5 py-2.5 rounded-xl border border-gray-700 text-gray-300 text-sm font-semibold">Cancel</button>
-                    <button type="submit" id="accSaveBtn" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold">Save Accessory</button>
+                    <button type="submit" id="accSaveBtn" class="px-5 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold">Save Accessory</button>
                 </div>
             </form>
         </div>
@@ -648,7 +645,7 @@
     <!-- Cart Drawer -->
     <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
         <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeCart()"></div>
-        <aside class="absolute right-0 top-0 h-full w-full max-w-md border-l border-white/10 flex flex-col shadow-2xl animate-slide-up" style="background:#0b0f19">
+        <aside class="absolute right-0 top-0 h-full w-full max-w-md border-l border-white/10 flex flex-col shadow-2xl animate-slide-up" style="background:#0d0b08">
             <div class="flex items-center justify-between px-5 py-4 border-b border-gray-800">
                 <h3 class="font-lux text-xl font-bold text-white flex items-center gap-2"><i data-lucide="shopping-cart" class="w-5 h-5 text-brand-500"></i> Your Cart</h3>
                 <button onclick="closeCart()" aria-label="Close cart" class="p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
@@ -659,7 +656,7 @@
                     <span class="text-sm text-gray-400 font-semibold">Total</span>
                     <span id="cartTotal" class="text-2xl font-extrabold text-white">0 EGP</span>
                 </div>
-                <button id="cartCheckoutBtn" onclick="openCheckout()" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                <button id="cartCheckoutBtn" onclick="openCheckout()" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed">
                     <i data-lucide="credit-card" class="w-4 h-4"></i> Proceed to Checkout
                 </button>
             </div>
@@ -668,7 +665,7 @@
 
     <!-- Checkout Modal -->
     <div id="checkoutModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(11,15,25,.96)">
+        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(13,11,8,.96)">
             <button onclick="closeCheckout()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
 
             <div id="checkoutFormView">
@@ -734,14 +731,100 @@
                 <div class="w-16 h-16 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mx-auto mb-4"><i data-lucide="check" class="w-8 h-8 text-emerald-400"></i></div>
                 <h3 class="font-lux text-2xl font-bold text-white mb-2">Order Received!</h3>
                 <p id="successText" class="text-sm text-gray-300 mb-6"></p>
-                <button onclick="closeCheckout()" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold transition-all">Continue Shopping</button>
+                <button onclick="closeCheckout()" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-all">Continue Shopping</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div id="menuDrawer" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeMenu()"></div>
+        <aside class="absolute right-0 top-0 h-full w-full max-w-xs border-l border-white/10 flex flex-col shadow-2xl animate-slide-up" style="background:#0d0b08">
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-800">
+                <h3 class="font-lux text-xl font-bold text-white">Menu</h3>
+                <button onclick="closeMenu()" aria-label="Close menu" class="p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
+            </div>
+            <div id="menuUser" class="px-5 pt-4 pb-1 text-xs text-gray-400"></div>
+            <nav id="menuItems" class="p-3 space-y-1"></nav>
+        </aside>
+    </div>
+
+    <!-- Customer Login -->
+    <div id="custLoginModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up" style="background:rgba(13,11,8,.96)">
+            <button onclick="cancelAuth()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 bg-brand-600/20 border border-brand-500/30 rounded-2xl flex items-center justify-center mx-auto mb-3"><i data-lucide="log-in" class="w-6 h-6 text-brand-500"></i></div>
+                <h3 class="font-lux text-2xl font-bold text-white">Login</h3>
+                <p id="custLoginNotice" class="hidden mt-2 text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-xl px-3 py-2"></p>
+            </div>
+            <form id="custLoginForm" onsubmit="handleCustomerLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Username / اسم المستخدم</label>
+                    <input type="text" id="custLoginUser" required maxlength="20" autocomplete="username" autocapitalize="none" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Password / كلمة المرور</label>
+                    <input type="password" id="custLoginPass" required autocomplete="current-password" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <p id="custLoginError" class="text-xs text-red-400 min-h-[1rem]"></p>
+                <button type="submit" id="custLoginBtn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all disabled:opacity-60">Login</button>
+            </form>
+            <p class="text-xs text-gray-400 text-center mt-4">New here? <button onclick="openAuth('signup')" class="text-brand-400 hover:text-brand-300 font-semibold underline underline-offset-2">Create an account</button></p>
+        </div>
+    </div>
+
+    <!-- Customer Sign Up -->
+    <div id="custSignupModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up" style="background:rgba(13,11,8,.96)">
+            <button onclick="cancelAuth()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <div class="text-center mb-5">
+                <div class="w-12 h-12 bg-brand-600/20 border border-brand-500/30 rounded-2xl flex items-center justify-center mx-auto mb-3"><i data-lucide="user-plus" class="w-6 h-6 text-brand-500"></i></div>
+                <h3 class="font-lux text-2xl font-bold text-white">Sign Up</h3>
+                <p id="custSignupNotice" class="hidden mt-2 text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-xl px-3 py-2"></p>
+            </div>
+            <form id="custSignupForm" onsubmit="handleCustomerSignup(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Choose a Username / اسم المستخدم</label>
+                    <input type="text" id="custSignupUser" required maxlength="20" autocomplete="username" autocapitalize="none" oninput="checkUsernameAvailability(this.value)" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                    <p id="usernameHint" class="text-xs mt-1 min-h-[1rem] text-gray-500">3-20 letters, numbers, dots or underscores.</p>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Password / كلمة المرور (min. 6 characters)</label>
+                    <input type="password" id="custSignupPass" required minlength="6" maxlength="72" autocomplete="new-password" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Confirm Password</label>
+                    <input type="password" id="custSignupPass2" required minlength="6" maxlength="72" autocomplete="new-password" class="w-full px-4 py-2.5 bg-dark-input border border-gray-700 rounded-xl text-sm text-white focus:outline-none focus:border-brand-500">
+                </div>
+                <p id="custSignupError" class="text-xs text-red-400 min-h-[1rem]"></p>
+                <button type="submit" id="custSignupBtn" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all disabled:opacity-60">Create Account</button>
+            </form>
+            <p class="text-xs text-gray-400 text-center mt-4">Already have an account? <button onclick="openAuth('login')" class="text-brand-400 hover:text-brand-300 font-semibold underline underline-offset-2">Login</button></p>
+        </div>
+    </div>
+
+    <!-- My Orders -->
+    <div id="myOrdersModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(13,11,8,.96)">
+            <button onclick="closeMyOrders()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <h3 class="font-lux text-2xl font-bold text-white mb-4 flex items-center gap-2"><i data-lucide="package" class="w-5 h-5 text-brand-500"></i> My Orders</h3>
+            <div id="myOrdersBody"></div>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div id="contactModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card max-w-md w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(13,11,8,.96)">
+            <button onclick="closeContact()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <h3 class="font-lux text-2xl font-bold text-white mb-4 flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-brand-500"></i> Contact Us</h3>
+            <div id="contactBody" class="space-y-3"></div>
         </div>
     </div>
 
     <!-- Order Detail Modal -->
     <div id="orderDetailModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(11,15,25,.96)">
+        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[92vh] overflow-y-auto" style="background:rgba(13,11,8,.96)">
             <button onclick="closeOrderDetail()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
             <div id="orderDetailBody"></div>
         </div>
@@ -749,7 +832,7 @@
 
     <!-- Policies Modal -->
     <div id="policiesModal" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
-        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[90vh] overflow-y-auto" style="background:rgba(11,15,25,.96)">
+        <div class="glass-card max-w-2xl w-full rounded-3xl border border-white/10 p-6 sm:p-8 relative shadow-2xl animate-slide-up max-h-[90vh] overflow-y-auto" style="background:rgba(13,11,8,.96)">
             <button onclick="closePolicies()" aria-label="Close" class="absolute top-4 right-4 p-2 rounded-full bg-gray-800/80 text-gray-300 hover:text-white transition-all"><i data-lucide="x" class="w-5 h-5"></i></button>
             <h3 class="font-lux text-2xl font-bold text-white mb-4 flex items-center gap-2"><i data-lucide="file-text" class="w-5 h-5 text-brand-500"></i> Store Policies</h3>
             <div id="policiesBody" class="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap"></div>
@@ -760,10 +843,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center"><i data-lucide="smartphone" class="w-4 h-4 text-white"></i></div>
-                        <span class="font-extrabold text-white text-sm">NEXUS MOBILE EGYPT</span>
+                    <div class="flex items-center gap-3 mb-3">
+                        <svg class="w-12 h-12 shrink-0" role="img" aria-label="Sabat Store logo"><use href="#sabatLogo"/></svg>
+                        <div class="leading-tight">
+                            <div class="font-black tracking-[0.12em] text-white text-sm"><span class="text-brand-400">SABAT</span> STORE</div>
+                            <div dir="rtl" class="text-xs font-bold text-brand-400">يا تلحقوني يا تسامحوني</div>
+                        </div>
                     </div>
+                    <div class="mb-3"><span class="inline-block px-3 py-1 rounded-sm font-extrabold text-xs tracking-wide" style="background:#f4ead2;color:#1a140a;border:2px solid #8f6a1f;box-shadow:0 2px 0 #8f6a1f">israa karam</span></div>
                     <p class="text-xs text-gray-500 leading-relaxed max-w-xs">Premium smartphones and accessories at direct-seller prices. All prices are in Egyptian Pounds (EGP).</p>
                 </div>
                 <div id="footerContact" class="space-y-2.5 text-sm text-gray-300"></div>
@@ -773,7 +860,7 @@
                 </div>
             </div>
             <div class="mt-8 pt-6 border-t border-gray-800/80 flex flex-col sm:flex-row items-center justify-between gap-3">
-                <p class="text-xs text-gray-500">© 2026 NEXUS Store. All rights reserved.</p>
+                <p class="text-xs text-gray-500">© 2026 SABAT STORE · israa karam. All rights reserved.</p>
                 <button onclick="openPolicies()" class="text-xs text-gray-400 hover:text-white underline underline-offset-2 transition-colors">Store Policies / سياسات الموقع</button>
             </div>
         </div>
@@ -852,7 +939,8 @@
                 adminSession = data.session;
                 sb.auth.onAuthStateChange((_evt, session) => {
                     adminSession = session;
-                    if (!session && currentView === 'admin') handleAdminDashboardClick();
+                    if (!session && currentView === 'admin') goStore();
+                    renderMenu();
                 });
             },
             async login(email, password) {
@@ -910,12 +998,14 @@
 
         window.addEventListener('DOMContentLoaded', async () => {
             await BackendServer.init();
+            loadStoredCustomer();
+            await refreshCustomer();
             const ok = await Cloud.load().catch(() => false);
             if (!sb) showBanner('Demo mode: add your Supabase keys in the code to enable cloud storage and admin login.');
             else if (!ok) showBanner('Could not reach the cloud database. Check your Supabase setup guide.');
             renderProducts();
             renderAccessories();
-            renderFooter(); renderCart();
+            renderFooter(); renderCart(); renderMenu();
             initFx();
             lucide.createIcons();
         });
@@ -962,7 +1052,7 @@
                     </div>
                     <div class="flex items-center justify-between gap-3">
                         <span class="text-xl font-extrabold text-white">${num(a.price).toLocaleString()} <span class="text-xs text-gray-400 font-semibold">EGP</span></span>
-                        <button onclick="orderAccessory('${esc(a.id)}')" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold shadow-md transition-all flex items-center gap-1.5">
+                        <button onclick="orderAccessory('${esc(a.id)}')" class="px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold shadow-md transition-all flex items-center gap-1.5">
                             <i data-lucide="message-square" class="w-3.5 h-3.5"></i> Order
                         </button>
                     </div>
@@ -1069,7 +1159,7 @@
         }
 
         // ---------- Shopping cart ----------
-        const CART_KEY = 'nexus_cart_v1';
+        const CART_KEY = 'sabat_cart_v1';
         let cart = [];
         try {
             cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]').filter(i => i && typeof i.id === 'string' && Number.isInteger(i.qty) && i.qty > 0);
@@ -1156,7 +1246,11 @@
             pruneCart();
             if (!cartLines().length) { showToast('Your cart is empty', 'error'); return; }
             closeCart(); closeDetailModal();
+            if (!customer) { pendingCheckout = true; openAuth('login', 'Please log in or sign up to complete your purchase.'); return; }
             document.getElementById('checkoutForm').reset();
+            document.getElementById('chkName').value = customer.full_name || '';
+            document.getElementById('chkPhone').value = customer.phone || '';
+            document.getElementById('chkAddress').value = customer.address || '';
             receiptFile = null;
             document.getElementById('chkReceiptPreview').innerHTML = '';
             document.getElementById('checkoutFormView').classList.remove('hidden');
@@ -1199,6 +1293,7 @@
         async function submitOrder(e) {
             e.preventDefault();
             if (!sb) { showToast('Checkout is unavailable until the store cloud is configured', 'error'); return; }
+            if (!customer) { closeCheckout(); pendingCheckout = true; openAuth('login', 'Please log in to complete your purchase.'); return; }
             pruneCart();
             const lines = cartLines();
             if (!lines.length) { showToast('Your cart is empty', 'error'); closeCheckout(); return; }
@@ -1224,20 +1319,25 @@
                         instagram: payMethod === 'instapay' ? instagram : null,
                         sender_number: payMethod === 'wallet' ? sender : null, receipt_path: path
                     },
-                    p_items: cart.map(i => ({ id: i.id, qty: i.qty }))
+                    p_items: cart.map(i => ({ id: i.id, qty: i.qty })),
+                    p_token: customer.token
                 });
                 if (error) throw error;
+                customer = { ...customer, full_name: name, phone, address };
                 const ref = String(data).slice(0, 8).toUpperCase();
                 cart = []; saveCart();
                 await Cloud.load();
                 renderProducts(); renderCart();
-                document.getElementById('successText').textContent = `Thank you ${name}! Order #${ref} (${total.toLocaleString()} EGP) was received. We will verify your payment and contact you on ${phone}.`;
+                document.getElementById('successText').textContent = `Thank you ${name}! Order #${ref} (${total.toLocaleString()} EGP) was received. We will verify your payment and contact you on ${phone}. Track its status any time from the menu: My Orders.`;
                 document.getElementById('checkoutFormView').classList.add('hidden');
                 document.getElementById('checkoutSuccessView').classList.remove('hidden');
             } catch (err) {
                 console.error(err);
                 const m = String(err.message || '');
-                if (m.includes('OUT_OF_STOCK')) {
+                if (m.includes('LOGIN_REQUIRED')) {
+                    customer = null; saveCustomer(); renderMenu(); closeCheckout(); pendingCheckout = true;
+                    openAuth('login', 'Your session expired. Please log in again.');
+                } else if (m.includes('OUT_OF_STOCK')) {
                     const t = m.split('OUT_OF_STOCK:')[1] || 'An item';
                     showToast(`"${t.trim()}" no longer has enough stock. Your cart was updated.`, 'error');
                     await Cloud.load(); pruneCart(); renderProducts(); renderCart();
@@ -1312,8 +1412,10 @@
         // ---------- Admin orders ----------
         let adminOrders = [];
         const ACCEPTED = ['confirmed', 'shipped', 'delivered'];
-        const ACCEPTED_STATUSES = ['confirmed', 'shipped', 'delivered'];
-        const statusLabel = st => st === 'confirmed' ? 'verified' : st;
+        const ALL_STATUSES = ['pending', 'confirmed', 'shipped', 'delivered', 'cancelled'];
+        const STATUS_LABELS = { pending: 'Awaiting verification', confirmed: 'Verified by Admin', shipped: 'Shipped', delivered: 'Delivered', cancelled: 'Rejected / Cancelled' };
+        const statusLabel = st => STATUS_LABELS[st] || st;
+        const statusSelect = (id, cur) => `<select onchange="updateOrderStatus('${esc(id)}', this.value)" class="bg-dark-input border border-gray-700 rounded-lg px-2 py-1.5 text-xs text-white">${ALL_STATUSES.map(st => `<option value="${st}" ${cur === st ? 'selected' : ''}>${statusLabel(st)}</option>`).join('')}</select>`;
         const orderRef = o => String(o.id).slice(0, 8).toUpperCase();
         const orderPay = o => o.payment_method === 'instapay'
             ? `InstaPay<br><span class="text-xs text-gray-400" dir="ltr">${esc(o.instagram || '')}</span>`
@@ -1350,6 +1452,7 @@
                         <button onclick="openOrderDetail('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">Order details</button>
                         <button onclick="updateOrderStatus('${esc(o.id)}','confirmed')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold text-white transition-all">Verify</button>
                         <button onclick="rejectOrder('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-red-600 text-xs font-semibold text-gray-200 transition-all">Reject</button>
+                        <button onclick="deleteOrder('${esc(o.id)}')" aria-label="Delete order" class="px-2.5 py-1.5 rounded-lg bg-gray-800 hover:bg-red-600 text-gray-300 hover:text-white transition-all"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button>
                     </td>
                 </tr>`).join('') : emptyRow(7, 'No orders waiting for review.');
         }
@@ -1371,10 +1474,8 @@
                     <td class="px-4 py-4 text-xs"><div class="font-bold text-white text-sm">${esc(o.customer_name)}</div><div dir="ltr">${esc(o.phone)}</div></td>
                     <td class="px-4 py-4 text-xs">${orderItems(o)}</td>
                     <td class="px-4 py-4 font-bold text-white whitespace-nowrap">${num(o.total).toLocaleString()} EGP</td>
-                    <td class="px-4 py-4">${ACCEPTED.includes(o.status)
-                        ? `<select onchange="updateOrderStatus('${esc(o.id)}', this.value)" class="bg-dark-input border border-gray-700 rounded-lg px-2 py-1.5 text-xs text-white">${ACCEPTED_STATUSES.map(st => `<option value="${st}" ${o.status === st ? 'selected' : ''}>${statusLabel(st)}</option>`).join('')}</select>`
-                        : `<span class="text-xs font-bold px-2 py-1 rounded-lg bg-red-500/20 text-red-400 border border-red-500/30">${esc(o.status)}</span>`}</td>
-                    <td class="px-4 py-4 text-right"><button onclick="openOrderDetail('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">Open</button></td>
+                    <td class="px-4 py-4">${statusSelect(o.id, o.status)}</td>
+                    <td class="px-4 py-4 text-right whitespace-nowrap space-x-2"><button onclick="openOrderDetail('${esc(o.id)}')" class="px-3 py-1.5 rounded-lg bg-gray-800 hover:bg-brand-600 text-xs font-semibold text-gray-200 transition-all">Order details</button><button onclick="deleteOrder('${esc(o.id)}')" aria-label="Delete order" class="px-2.5 py-1.5 rounded-lg bg-gray-800 hover:bg-red-600 text-gray-300 hover:text-white transition-all"><i data-lucide="trash-2" class="w-3.5 h-3.5 inline"></i></button></td>
                 </tr>`).join('') : emptyRow(6, 'No orders match.');
         }
 
@@ -1388,6 +1489,7 @@
                 <p class="text-xs text-gray-400 mb-4">${esc(new Date(o.created_at).toLocaleString())} · Status: <b class="text-gray-200">${esc(o.status === 'pending' ? 'awaiting verification' : statusLabel(o.status))}</b></p>
                 <div class="mb-5">
                     ${row('Customer', esc(o.customer_name))}
+                    ${o.customer_username ? row('Account username', esc(o.customer_username)) : ''}
                     ${row('Contact number', `<span dir="ltr">${esc(o.phone)}</span>`)}
                     ${o.phone2 ? row('Second number', `<span dir="ltr">${esc(o.phone2)}</span>`) : ''}
                     ${row('Delivery address', esc(o.address))}
@@ -1396,11 +1498,15 @@
                 </div>
                 <table class="w-full text-sm mb-2"><thead><tr class="text-xs uppercase text-gray-500 border-b border-gray-700"><th class="text-left py-2">Item</th><th class="py-2">Qty</th><th class="text-right py-2">Unit</th><th class="text-right py-2">Subtotal</th></tr></thead><tbody>${lines}</tbody></table>
                 <div class="flex justify-between items-center py-3 border-t border-gray-700 mb-5"><span class="font-bold text-white">Total</span><span class="text-xl font-extrabold text-emerald-400">${num(o.total).toLocaleString()} EGP</span></div>
-                <button onclick="viewReceipt('${esc(o.receipt_path)}')" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> View payment receipt</button>
+                <button onclick="viewReceipt('${esc(o.receipt_path)}')" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow-lg transition-all flex items-center justify-center gap-2"><i data-lucide="image" class="w-4 h-4"></i> View payment receipt</button>
                 ${o.status === 'pending' ? `<div class="grid grid-cols-2 gap-3 mt-3">
                     <button onclick="verifyFromModal('${esc(o.id)}')" class="py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2"><i data-lucide="badge-check" class="w-4 h-4"></i> Verify order</button>
                     <button onclick="rejectFromModal('${esc(o.id)}')" class="py-3 rounded-xl bg-gray-800 hover:bg-red-600 text-gray-200 font-semibold text-sm transition-all">Reject</button>
-                </div>` : ''}`;
+                </div>` : ''}
+                <div class="mt-5 pt-4 border-t border-gray-800 flex flex-col sm:flex-row gap-3 sm:items-center justify-between">
+                    <div class="flex items-center gap-2"><span class="text-xs text-gray-400">Status</span>${statusSelect(o.id, o.status)}</div>
+                    <button onclick="deleteOrder('${esc(o.id)}', true)" class="px-4 py-2.5 rounded-xl bg-red-600/20 hover:bg-red-600 border border-red-500/40 text-red-300 hover:text-white text-sm font-semibold transition-all flex items-center justify-center gap-2"><i data-lucide="trash-2" class="w-4 h-4"></i> Delete order</button>
+                </div>`;
             lucide.createIcons();
             document.getElementById('orderDetailModal').classList.remove('hidden');
         }
@@ -1416,17 +1522,260 @@
             if (w) w.location = data.signedUrl; else showToast('Allow pop-ups to view receipts', 'error');
         }
         async function updateOrderStatus(id, status) {
-            if (!sb || !['confirmed', 'shipped', 'delivered', 'cancelled'].includes(status)) return;
+            if (!sb || !ALL_STATUSES.includes(status)) return;
             const { error } = await sb.from('orders').update({ status }).eq('id', id);
             if (error) { showToast('Update failed: ' + error.message, 'error'); loadAdminOrders(); return; }
             const o = adminOrders.find(x => x.id === id);
             if (o) o.status = status;
             renderAdminOrders();
-            showToast(status === 'confirmed' ? 'Order verified' : 'Order marked ' + statusLabel(status), 'success');
+            showToast(status === 'confirmed' ? 'Order verified' : 'Status changed to: ' + statusLabel(status), 'success');
+            if (!document.getElementById('orderDetailModal').classList.contains('hidden')) openOrderDetail(id);
         }
         function rejectOrder(id) {
             if (!confirm('Reject this order? Stock is NOT returned automatically.')) return;
             updateOrderStatus(id, 'cancelled');
+        }
+
+        // ---------- Hamburger menu ----------
+        function openMenu() { renderMenu(); document.getElementById('menuDrawer').classList.remove('hidden'); }
+        function closeMenu() { document.getElementById('menuDrawer').classList.add('hidden'); }
+        function menuBtn(icon, label, fn) {
+            return `<button onclick="closeMenu();${fn}" class="w-full flex items-center gap-3 px-4 py-3.5 rounded-xl hover:bg-gray-800/70 text-left text-sm font-semibold text-gray-200 transition-all"><i data-lucide="${icon}" class="w-5 h-5 text-brand-500"></i>${label}</button>`;
+        }
+        function renderMenu() {
+            const adminIn = BackendServer.isAuthenticated();
+            const items = [];
+            if (customer) {
+                items.push(menuBtn('package', 'My Orders', 'openMyOrders()'), menuBtn('log-out', 'Logout', 'customerLogout()'));
+            } else {
+                items.push(menuBtn('log-in', 'Login', "openAuth('login')"), menuBtn('user-plus', 'Sign Up', "openAuth('signup')"));
+            }
+            if (adminIn) {
+                items.push(menuBtn('layout-dashboard', 'Admin Dashboard', 'showAdminView()'));
+                if (currentView === 'admin') items.push(menuBtn('store', 'View Store', 'goStore()'));
+                items.push(menuBtn('shield-off', 'Logout Admin', 'adminLogout()'));
+            } else {
+                items.push(menuBtn('shield', 'Admin Login', 'openAdminLoginModal()'));
+            }
+            items.push(menuBtn('phone', 'Contact Us', 'openContact()'));
+            document.getElementById('menuItems').innerHTML = items.join('');
+            document.getElementById('menuUser').innerHTML = customer ? `Signed in as <b class="text-white">${esc(customer.username)}</b>` : 'Browsing as a guest. Log in to buy.';
+            const label = document.getElementById('menuUserLabel');
+            label.textContent = customer ? customer.username : '';
+            label.classList.toggle('hidden', !customer);
+            label.classList.toggle('sm:inline', !!customer);
+            lucide.createIcons();
+        }
+        function goStore() {
+            currentView = 'customer';
+            document.getElementById('adminView').classList.add('hidden');
+            document.getElementById('customerView').classList.remove('hidden');
+            renderProducts(); renderMenu(); window.scrollTo(0, 0);
+        }
+        function adminLogout() { BackendServer.logout(); goStore(); showToast('Admin logged out'); }
+
+        // ---------- Customer accounts (username + password) ----------
+        const CUST_KEY = 'sabat_customer_v1';
+        const USER_RE = /^[A-Za-z0-9_.]{3,20}$/;
+        let customer = null;          // { token, username, full_name, phone, address }
+        let pendingCheckout = false;
+        function loadStoredCustomer() {
+            try {
+                const j = JSON.parse(localStorage.getItem(CUST_KEY) || 'null');
+                if (j && typeof j.token === 'string' && typeof j.username === 'string') customer = { token: j.token, username: j.username };
+            } catch (e) { customer = null; }
+        }
+        function saveCustomer() {
+            try {
+                if (customer) localStorage.setItem(CUST_KEY, JSON.stringify({ token: customer.token, username: customer.username }));
+                else localStorage.removeItem(CUST_KEY);
+            } catch (e) {}
+        }
+        async function refreshCustomer() {
+            if (!customer || !sb) { renderMenu(); return; }
+            const { data, error } = await sb.rpc('customer_me', { p_token: customer.token });
+            if (!error) {
+                if (!data) { customer = null; saveCustomer(); }
+                else customer = { ...customer, ...data };
+            }
+            renderMenu();
+        }
+        function setText(id, msg) { document.getElementById(id).textContent = msg || ''; }
+        function openAuth(mode, notice = '') {
+            closeMenu();
+            const login = mode === 'login';
+            document.getElementById('custLoginForm').reset();
+            document.getElementById('custSignupForm').reset();
+            setText('custLoginError', ''); setText('custSignupError', '');
+            const hint = document.getElementById('usernameHint');
+            hint.className = 'text-xs mt-1 min-h-[1rem] text-gray-500';
+            hint.textContent = '3-20 letters, numbers, dots or underscores.';
+            document.getElementById('custLoginModal').classList.toggle('hidden', !login);
+            document.getElementById('custSignupModal').classList.toggle('hidden', login);
+            const n = document.getElementById(login ? 'custLoginNotice' : 'custSignupNotice');
+            n.textContent = notice; n.classList.toggle('hidden', !notice);
+            document.getElementById('custLoginNotice').classList.toggle('hidden', !login || !notice);
+            document.getElementById('custSignupNotice').classList.toggle('hidden', login || !notice);
+            if (!login) document.getElementById('custSignupNotice').textContent = notice;
+            else document.getElementById('custLoginNotice').textContent = notice;
+        }
+        function closeAuthModals() {
+            document.getElementById('custLoginModal').classList.add('hidden');
+            document.getElementById('custSignupModal').classList.add('hidden');
+        }
+        function cancelAuth() { pendingCheckout = false; closeAuthModals(); }
+        async function authSuccess(res, msg) {
+            customer = { token: res.token, username: res.username };
+            saveCustomer();
+            await refreshCustomer();
+            closeAuthModals();
+            showToast(msg, 'success');
+            if (pendingCheckout) { pendingCheckout = false; openCheckout(); }
+        }
+        async function handleCustomerLogin(e) {
+            e.preventDefault();
+            if (!sb) { setText('custLoginError', 'The store cloud is not configured yet.'); return; }
+            const btn = document.getElementById('custLoginBtn');
+            btn.disabled = true; setText('custLoginError', '');
+            const { data, error } = await sb.rpc('customer_login', {
+                p_username: document.getElementById('custLoginUser').value.trim(),
+                p_password: document.getElementById('custLoginPass').value
+            });
+            btn.disabled = false;
+            if (error) { console.error(error); setText('custLoginError', 'Could not log in right now. Please try again.'); return; }
+            if (data && data.error === 'ACCOUNT_LOCKED') { setText('custLoginError', 'Too many wrong attempts. Please try again in 10 minutes.'); return; }
+            if (!data || data.error) { setText('custLoginError', 'Wrong username or password.'); return; }
+            await authSuccess(data, `Welcome back, ${data.username}!`);
+        }
+        async function handleCustomerSignup(e) {
+            e.preventDefault();
+            if (!sb) { setText('custSignupError', 'The store cloud is not configured yet.'); return; }
+            const user = document.getElementById('custSignupUser').value.trim();
+            const pass = document.getElementById('custSignupPass').value;
+            if (!USER_RE.test(user)) { setText('custSignupError', 'Username must be 3-20 letters, numbers, dots or underscores.'); return; }
+            if (pass.length < 6) { setText('custSignupError', 'Password must be at least 6 characters.'); return; }
+            if (pass !== document.getElementById('custSignupPass2').value) { setText('custSignupError', 'The two passwords do not match.'); return; }
+            const btn = document.getElementById('custSignupBtn');
+            btn.disabled = true; setText('custSignupError', '');
+            const { data, error } = await sb.rpc('customer_signup', { p_username: user, p_password: pass });
+            btn.disabled = false;
+            if (error) {
+                const m = String(error.message || '');
+                if (m.includes('USERNAME_TAKEN')) {
+                    setText('custSignupError', 'This username is already taken. Please choose another one.');
+                    const hint = document.getElementById('usernameHint');
+                    hint.className = 'text-xs mt-1 min-h-[1rem] text-red-400'; hint.textContent = 'This username is already taken.';
+                } else if (m.includes('INVALID_USERNAME')) setText('custSignupError', 'Username must be 3-20 letters, numbers, dots or underscores.');
+                else if (m.includes('INVALID_PASSWORD')) setText('custSignupError', 'Password must be 6-72 characters.');
+                else { console.error(error); setText('custSignupError', 'Could not create the account right now. Please try again.'); }
+                return;
+            }
+            await authSuccess(data, `Account created. Welcome, ${data.username}!`);
+        }
+        let unameTimer = null, unameSeq = 0;
+        function checkUsernameAvailability(v) {
+            const hint = document.getElementById('usernameHint');
+            v = v.trim(); clearTimeout(unameTimer); unameSeq++;
+            const set = (cls, txt) => { hint.className = 'text-xs mt-1 min-h-[1rem] ' + cls; hint.textContent = txt; };
+            if (!v) { set('text-gray-500', '3-20 letters, numbers, dots or underscores.'); return; }
+            if (!USER_RE.test(v)) { set('text-red-400', 'Use 3-20 letters, numbers, dots or underscores.'); return; }
+            if (!sb) return;
+            set('text-gray-400', 'Checking...');
+            const seq = unameSeq;
+            unameTimer = setTimeout(async () => {
+                const { data, error } = await sb.rpc('username_available', { p_username: v });
+                if (seq !== unameSeq || error) return;
+                if (data) set('text-emerald-400', 'This username is available.');
+                else set('text-red-400', 'This username is already taken. Please choose another one.');
+            }, 400);
+        }
+        async function customerLogout() {
+            const t = customer && customer.token;
+            customer = null; saveCustomer(); renderMenu();
+            if (sb && t) sb.rpc('customer_logout', { p_token: t });
+            showToast('Logged out');
+        }
+
+        // ---------- My Orders (customer) ----------
+        const BADGE = {
+            pending: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+            confirmed: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+            shipped: 'bg-sky-500/20 text-sky-400 border-sky-500/30',
+            delivered: 'bg-emerald-600/30 text-emerald-300 border-emerald-500/40',
+            cancelled: 'bg-red-500/20 text-red-400 border-red-500/30'
+        };
+        const statusBadge = st => `<span class="text-[11px] font-bold px-2.5 py-1 rounded-full border whitespace-nowrap ${BADGE[st] || BADGE.pending}">${esc(statusLabel(st))}</span>`;
+        const FLOW = [['pending', 'Placed'], ['confirmed', 'Verified'], ['shipped', 'Shipped'], ['delivered', 'Delivered']];
+        function progressBar(status) {
+            if (status === 'cancelled') return `<div class="text-xs font-semibold text-red-400 bg-red-500/10 border border-red-500/30 rounded-xl px-3 py-2 my-3">This order was rejected or cancelled by the store. Please contact us for details.</div>`;
+            const idx = FLOW.findIndex(f => f[0] === status);
+            return `<div class="flex items-start gap-1.5 my-3">${FLOW.map((f, i) => `<div class="flex-1"><div class="h-1.5 rounded-full ${i <= idx ? 'bg-emerald-500' : 'bg-gray-700'}"></div><div class="text-[10px] mt-1 ${i <= idx ? 'text-emerald-400' : 'text-gray-500'}">${f[1]}</div></div>`).join('')}</div>`;
+        }
+        function closeMyOrders() { document.getElementById('myOrdersModal').classList.add('hidden'); }
+        async function openMyOrders() {
+            if (!customer) { openAuth('login', 'Please log in to see your orders.'); return; }
+            const body = document.getElementById('myOrdersBody');
+            body.innerHTML = '<div class="text-center text-gray-500 text-sm py-10">Loading your orders...</div>';
+            document.getElementById('myOrdersModal').classList.remove('hidden');
+            const { data, error } = await sb.rpc('customer_orders', { p_token: customer.token });
+            if (error) { body.innerHTML = `<div class="text-center text-red-400 text-sm py-10">Could not load your orders: ${esc(error.message)}</div>`; return; }
+            const info = `<div class="rounded-2xl bg-gray-900/50 border border-gray-800 p-4 mb-4 text-sm">
+                <div class="text-xs uppercase tracking-widest text-gray-500 mb-1">Account</div>
+                <div class="font-bold text-white">${esc(customer.username)}</div>
+                ${customer.phone ? `<div class="text-gray-400 text-xs mt-1" dir="ltr">${esc(customer.phone)}</div>` : ''}
+                ${customer.address ? `<div class="text-gray-400 text-xs mt-0.5">${esc(customer.address)}</div>` : ''}
+            </div>`;
+            if (!data || !data.length) { body.innerHTML = info + '<div class="text-center text-gray-500 text-sm py-10">You have no orders yet.</div>'; return; }
+            body.innerHTML = info + `<div class="space-y-3">${data.map(o => {
+                const lines = (o.items || []).map(i => `<tr><td class="py-1.5 pr-2 text-gray-200">${esc(i.title)}</td><td class="py-1.5 text-center text-gray-400">×${num(i.qty)}</td><td class="py-1.5 text-right text-white font-semibold whitespace-nowrap">${(num(i.unit_price) * num(i.qty)).toLocaleString()} EGP</td></tr>`).join('');
+                return `<details class="rounded-2xl border border-gray-800 bg-gray-900/40 open:border-brand-500/40">
+                    <summary class="list-none cursor-pointer p-4 flex items-center justify-between gap-3">
+                        <div><div class="font-bold text-white text-sm">Order #${esc(String(o.id).slice(0, 8).toUpperCase())}</div><div class="text-xs text-gray-400">${esc(new Date(o.created_at).toLocaleString())}</div></div>
+                        <div class="text-right space-y-1">${statusBadge(o.status)}<div class="text-sm font-extrabold text-white">${num(o.total).toLocaleString()} EGP</div></div>
+                    </summary>
+                    <div class="px-4 pb-4">
+                        ${progressBar(o.status)}
+                        <table class="w-full text-sm mb-2"><tbody>${lines}</tbody></table>
+                        <div class="text-xs text-gray-400 space-y-1 pt-2 border-t border-gray-800">
+                            <div><span class="text-gray-500">Payment:</span> ${o.payment_method === 'instapay' ? 'InstaPay' : 'E-Wallet'}</div>
+                            <div><span class="text-gray-500">Delivery address:</span> ${esc(o.address)}</div>
+                            <div><span class="text-gray-500">Contact:</span> <span dir="ltr">${esc(o.phone)}${o.phone2 ? ' / ' + esc(o.phone2) : ''}</span></div>
+                        </div>
+                    </div>
+                </details>`;
+            }).join('')}</div>`;
+        }
+
+        // ---------- Contact Us ----------
+        function closeContact() { document.getElementById('contactModal').classList.add('hidden'); }
+        function openContact() {
+            const wa = digitsOnly(settings.whatsapp), tg = telegramUrl(settings.telegram), loc = (settings.location || '').trim();
+            const card = (href, icon, color, title, sub) => `<a href="${esc(href)}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3.5 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-brand-500/50 transition-all"><div class="w-10 h-10 rounded-xl bg-gray-800 flex items-center justify-center shrink-0"><i data-lucide="${icon}" class="w-5 h-5 ${color}"></i></div><div class="min-w-0"><div class="text-sm font-bold text-white">${title}</div><div class="text-xs text-gray-400 truncate">${sub}</div></div></a>`;
+            const parts = [];
+            if (wa) parts.push(card(`https://wa.me/${wa}`, 'phone-call', 'text-emerald-400', 'WhatsApp', `<span dir="ltr">+${wa}</span>`));
+            if (tg) parts.push(card(tg, 'send', 'text-sky-400', 'Telegram', esc(tg.replace(/^https?:\/\//, ''))));
+            if (loc) parts.push(card(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc)}`, 'map-pin', 'text-brand-500', 'Our store', esc(loc)));
+            const socials = SOCIALS.map(x => ({ ...x, url: safeUrl(settings[x.key]) })).filter(x => x.url);
+            if (socials.length) parts.push(`<div class="flex flex-wrap gap-3 pt-2">${socials.map(x => `<a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" aria-label="${x.label}" class="w-10 h-10 rounded-xl bg-gray-800/70 border border-gray-700 text-gray-300 hover:bg-brand-600 hover:text-white transition-all flex items-center justify-center"><i data-lucide="${x.icon}" class="w-4 h-4"></i></a>`).join('')}</div>`);
+            document.getElementById('contactBody').innerHTML = parts.join('') || '<div class="text-center text-gray-500 text-sm py-6">Contact details are coming soon.</div>';
+            document.getElementById('contactModal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        // ---------- Admin: delete an order ----------
+        async function deleteOrder(id, fromModal = false) {
+            if (!sb || !BackendServer.isAuthenticated()) return;
+            const o = adminOrders.find(x => x.id === id);
+            if (!o) return;
+            if (!confirm(`Permanently delete order #${orderRef(o)} from ${o.customer_name}? This cannot be undone, and the stock is NOT returned.`)) return;
+            const { data, error } = await sb.from('orders').delete().eq('id', id).select();
+            if (error) { showToast('Delete failed: ' + error.message, 'error'); return; }
+            if (!data || !data.length) { showToast('Not deleted. Run accounts-upgrade.sql in Supabase first.', 'error'); return; }
+            if (o.receipt_path) { try { await sb.storage.from('receipts').remove([o.receipt_path]); } catch (e) {} }
+            adminOrders = adminOrders.filter(x => x.id !== id);
+            if (fromModal) closeOrderDetail();
+            renderAdminOrders();
+            showToast('Order deleted', 'success');
         }
 
         function setOffersTab(offersOnly) {
@@ -1523,7 +1872,7 @@
                             <button onclick="addToCart('${p.id}')" ${p.stock <= 0 ? 'disabled' : ''} aria-label="Add to cart" class="px-3 py-2.5 rounded-xl border border-gray-700 hover:border-brand-500 bg-gray-800/50 hover:bg-gray-800 text-gray-200 transition-all flex items-center justify-center disabled:opacity-40 disabled:cursor-not-allowed">
                                 <i data-lucide="shopping-cart" class="w-4 h-4"></i>
                             </button>
-                            <button onclick="buyNow('${p.id}')" ${p.stock <= 0 ? 'disabled' : ''} class="flex-1 py-2.5 rounded-xl ${isDiscount ? 'bg-red-600 hover:bg-red-500' : 'bg-brand-600 hover:bg-brand-500'} text-white text-xs font-semibold shadow-md transition-all flex items-center justify-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed">
+                            <button onclick="buyNow('${p.id}')" ${p.stock <= 0 ? 'disabled' : ''} class="flex-1 py-2.5 rounded-xl ${isDiscount ? 'bg-red-600 hover:bg-red-500' : 'bg-brand-600 hover:bg-brand-700'} text-white text-xs font-semibold shadow-md transition-all flex items-center justify-center gap-1 disabled:opacity-40 disabled:cursor-not-allowed">
                                 <i data-lucide="zap" class="w-3.5 h-3.5"></i> ${p.stock <= 0 ? 'Sold Out' : 'Buy Now'}
                             </button>
                         </div>
@@ -1659,29 +2008,14 @@
             showToast('تم استخراج البيانات وتعبئة الحقول بنجاح!', 'success');
         }
 
-        function handleAdminDashboardClick() {
-            if (currentView === 'admin') {
-                BackendServer.logout();
-                currentView = 'customer';
-                document.getElementById('adminView').classList.add('hidden');
-                document.getElementById('customerView').classList.remove('hidden');
-                document.getElementById('adminBtnText').innerText = 'Admin Dashboard';
-                showToast('Logged out');
-                renderProducts();
-            } else {
-                if (BackendServer.isAuthenticated()) showAdminView();
-                else openAdminLoginModal();
-            }
-        }
-
         function showAdminView() {
             currentView = 'admin';
             document.getElementById('customerView').classList.add('hidden');
             document.getElementById('adminView').classList.remove('hidden');
-            document.getElementById('adminBtnText').innerText = 'Logout Admin';
             fillSettingsForm(); loadAdminOrders();
             renderAdminTable();
             renderAdminAccessories();
+            renderMenu(); window.scrollTo(0, 0);
         }
 
         function openAdminLoginModal() {
